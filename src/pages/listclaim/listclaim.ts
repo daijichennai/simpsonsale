@@ -45,8 +45,12 @@ export class ListclaimPage {
     loader.present().then(() => {
       data.subscribe(result => {
         console.log(result);
-        this.isRecordAvailable = false;
-        this.claimJson = result;
+        if(result.length != 0){
+          this.claimJson = result;
+        }else{
+          this.isRecordAvailable = true;
+        }
+        
         loader.dismiss();
       }, error => {
         this.isRecordAvailable = true;
