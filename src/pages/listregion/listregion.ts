@@ -31,7 +31,7 @@ export class ListregionPage {
   }
   
 goToCustomerList(regMasterID:number){
-  this.navCtrl.push('',{
+  this.navCtrl.push('ListcustomerPage',{
     "regMasterID" :regMasterID
   });
 }
