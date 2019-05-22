@@ -30,6 +30,10 @@ export class ListregionPage {
     });
   }
   
+  settingFn(){
+    this.navCtrl.push('SettingsPage');
+  }
+
 goToCustomerList(regMasterID:number){
   this.navCtrl.push('ListcustomerPage',{
     "regMasterID" :regMasterID
