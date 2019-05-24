@@ -29,6 +29,11 @@ export class ListclaimPage {
     this.getClaimDetailsByCustCode(this.strCustCode);
   }
 
+
+  goToRegionPage() {
+    this.navCtrl.setRoot('ListregionPage');
+  }
+
   goToClaimDetailsPage(claimID:number){
     this.navCtrl.push('ClaimdetailsPage',{
       "claimID" :claimID
