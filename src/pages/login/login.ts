@@ -28,8 +28,11 @@ export class LoginPage {
     )
      {
       this.authForm = fb.group({
-        'chkUserMobile': [null, Validators.compose([Validators.required])],
+        // 'chkUserMobile': [null, Validators.compose([Validators.required])],
+        // 'chkUserPassword': [null, Validators.compose([Validators.required])]
+        'chkUserMobile': ['', Validators.compose([Validators.required, Validators.minLength(10)])],
         'chkUserPassword': [null, Validators.compose([Validators.required])]
+      //'chkUserPassword': ['', Validators.compose([Validators.required, Validators.minLength(8)])]
       });      
   }
 
